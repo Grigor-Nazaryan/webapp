@@ -12,6 +12,11 @@ export const up = async (queryInterface, Sequelize) => {
 			defaultValue: 10000,
 			allowNull: false,
 		},
+		version: {
+			type: Sequelize.INTEGER,
+			allowNull: false,
+			defaultValue: 0,
+		},
 		createdAt: {
 			allowNull: false,
 			type: DATE,
@@ -24,6 +29,7 @@ export const up = async (queryInterface, Sequelize) => {
 	await queryInterface.bulkInsert("Users", [
 		{
 			balance: 10000,
+			version: 0,
 			createdAt: new Date(),
 			updatedAt: new Date(),
 		},

@@ -8,6 +8,11 @@ export default (sequelize, DataTypes) => {
 				allowNull: false,
 			},
 			balance: DataTypes.INTEGER,
+			version: {
+				type: DataTypes.INTEGER,
+				allowNull: false,
+				defaultValue: 0,
+			},
 			createdAt: DataTypes.DATE,
 			updatedAt: DataTypes.DATE,
 		},
