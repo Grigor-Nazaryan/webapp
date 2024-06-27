@@ -16,8 +16,9 @@ export default (sequelize, DataTypes) => {
 			createdAt: DataTypes.DATE,
 			updatedAt: DataTypes.DATE,
 		},
-		{}
+		{ timestamps: true, version: true }
 	);
+
 	User.associate = function (models) {};
 	return User;
 };
